@@ -156,15 +156,15 @@ const isLoggedIn=asyncHandler(async(req,res)=>{
     )
 })
 const addToCart=asyncHandler(async(req,res)=>{
-    const {price,title}=req.body
-    if(!price || !title){
+    const {price,title,image,rating}=req.body
+    if(!price || !title || !image || !rating){
         throw new ApiError(400,"Nothing to Add in Cart")
     }
     const user=await User.findByIdAndUpdate(
         req.user._id,
         {
             $push: {
-                cart: { title, price }
+                cart: { title, price,image,rating }
             }
         },
         {
