@@ -42,7 +42,7 @@
     font-weight: 500;
     margin-top: 1em;
     display: flex;
-    gap: 4em;
+    /* gap: 4em; */
 }
 .Ratings button{
     background-color: orange;
@@ -50,4 +50,5 @@
     padding: 6px 8px;
     border-radius: 0.7em;
     cursor: pointer;
+    margin-left: 3em;
 }

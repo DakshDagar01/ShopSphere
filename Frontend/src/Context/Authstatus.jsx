@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }) => {
             setIsSignedIn(false)
         }
         else if (!isLoading && data?.success !== undefined) {
-            console.log("This is status of data",data.success)
             setIsSignedIn(data.success)
         }
     },[data,isLoading,error])

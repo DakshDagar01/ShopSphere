@@ -8,10 +8,10 @@ export const CartSlice=createApi({
     }),
     endpoints:(builder)=>({
         addToCart:builder.mutation({
-            query: ({ title, price }) => ({
+            query: ({ title, price, image, rating}) => ({
                 url: "/addToCart",
                 method: 'POST',
-                body: { title, price },
+                body: { title, price, image, rating},
             })
         }),
         removeFromCart:builder.mutation({

@@ -13,7 +13,7 @@ const ProductDisplay = ({category}) => {
                 <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
                   {
                     data.map((item,index)=>{
-                      return <Display key={index} item={item}/>
+                      return <Display key={index} item={item} category={category}/>
                     })
                   }
                 </div>
