@@ -17,12 +17,10 @@ const SignIn = () => {
     }
     async function handleSignIn(ev){
         ev.preventDefault()
-
         const email = emailRef.current.value
         const password = passwordRef.current.value
         try {
             const result = await login( {email, password }).unwrap()
-            console.log('Login successful:', result)
             dispatch(setSignIn(false))
         } catch (err) {
             const messageFromBackend = err?.data?.message || "Something went wrong";

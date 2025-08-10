@@ -3,3 +3,17 @@
     width: 100vw;
     height: 100vh;
 }
+.buyNow{
+    position: absolute;
+    background-color: purple;
+    color: white;
+    height: 2em;
+    right: 4em;
+    bottom: 2em;
+    border-radius: 5px;
+    padding:6px 8px 6px 8px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 550;
+    cursor: pointer;
+}

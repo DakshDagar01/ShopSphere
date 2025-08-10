@@ -30,9 +30,16 @@ const Cart = () => {
           : (
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
               {
-                data.data.map((item, index) => {
-                  return <ShowCart key={index} item={item} refetch={refetch} />
-                })
+                data.data.length > 0 ?
+                  <>
+                    {data.data.map((item, index) => {
+                      return <ShowCart key={index} item={item} refetch={refetch} />
+                    })}
+                    <button className={styles.buyNow}>Buy-Now</button>
+                  </>
+                  : <div>
+                    Your ShopSphere Cart is Empty!!
+                  </div>
               }
             </div>
           )

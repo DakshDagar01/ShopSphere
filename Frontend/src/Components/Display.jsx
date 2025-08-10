@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import styles from'../styles/Display.module.css'
-import { useAddToCartMutation, useRemoveFromCartMutation } from '../features/Cartslice'
+import { useAddToCartMutation } from '../features/Cartslice'
 
 const Display = ({item,category}) => {
     let image;
@@ -17,7 +17,11 @@ const Display = ({item,category}) => {
 
     const [addToCart]=useAddToCartMutation()
 
-    async function UpdateCart() {
+    async function UpdateCart(ev) {
+        ev.target.style.backgroundColor="lightGrey"
+        setTimeout(()=>{
+            ev.target.style.backgroundColor=""
+        },150)
         try {
             await addToCart({
                 title: titleRef.current.innerText,

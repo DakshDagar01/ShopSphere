@@ -187,9 +187,13 @@ const removeFromCart=asyncHandler(async(req,res)=>{
     }
     const user=await User.findByIdAndUpdate(req.user._id)
     let cart=[];
+    let count=0
     for (let i = 0; i < user.cart.length; i++) {
-        if(user.cart[i].title!==title){
+        if(user.cart[i].title!==title || count>=1){
             cart.push(user.cart[i])
+        }
+        else{
+            count++;
         }
     }
     user.cart=cart;

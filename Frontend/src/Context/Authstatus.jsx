@@ -8,11 +8,12 @@ import { useIsLoggedInQuery } from "../features/AuthSlice";
 const AuthstatusContext=createContext()
 
 export const AuthProvider = ({ children }) => {
+    const [isSignedIn, setIsSignedIn] = useState(false)
+
     const { data, error, isLoading ,refetch} = useIsLoggedInQuery(undefined,{
         refetchOnMountOrArgChange:true,//When the component using the query hook mounts, or when the arguments passed to the query hook change, the query will always refetch data from the source
-        pollingInterval:2000 //This makes sure that the request runs after every two request
+        pollingInterval:2000, //This makes sure that the request runs after every two request
     })
-    const [isSignedIn, setIsSignedIn] = useState(false)
 
     useEffect(() => {
         if (error && error?.status !== 404) {
