@@ -1,0 +1,53 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    height: 25em;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    background-color: #fff ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.Container:hover {
+    transform: translateY(-5px);
+}
+
+.Container img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.Title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.Price {
+    color: #2e7d32;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.Ratings {
+    color: #ff9800;
+    font-weight: 500;
+    margin-top: 1em;
+    display: flex;
+    gap: 4em;
+}
+.Ratings button{
+    background-color: orange;
+    font-size: large;
+    padding: 6px 8px;
+    border-radius: 0.7em;
+    cursor: pointer;
+}

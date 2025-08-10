@@ -1,0 +1,88 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(208, 212, 214, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* helps on very small screens */
+    box-sizing: border-box;
+}
+
+.loginPage {
+    background-color: white;
+    width: 100%;
+    max-width: 400px; /* limits size on big screens */
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.heading .text {
+    font-weight: bold;
+}
+
+.cross {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.email, .password, .signInNow {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 6px;
+}
+.email input,
+.password input {
+    width: 100%;
+    outline: none;
+    background-color: #fff3f3;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 8px; /* ✅ Adds space below the input */
+}
+
+
+.signInNow {
+    align-items: center;
+}
+
+.signInNow button {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4990ed;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
