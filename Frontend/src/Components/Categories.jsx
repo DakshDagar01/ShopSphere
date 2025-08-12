@@ -6,7 +6,6 @@
     const UpdateClass=(ev,category)=>{
       const id=ev.target.id
       let allBtns=ev.target.parentElement.parentElement.children
-      console.log(allBtns)
       for (let i=0;i<allBtns.length;i++){
           if(allBtns[i].children[0].id!=id){
               allBtns[i].children[0].classList.remove(styles.active)
